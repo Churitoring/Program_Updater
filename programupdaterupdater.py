@@ -5,20 +5,13 @@ import zipfile
 from subprocess import Popen
 import time
 import threading
-import json
 import sys
 
-# 파일을 읽기 모드로 열기
-with open('management.json', 'r') as f:
-    # JSON 데이터를 읽고, Python 딕셔너리로 변환
-    data = json.load(f)
-
-# JSON 데이터에서 실행 파일 이름과 레포지터리 이름 가져오기
-executable_name = data['executable_name']
-program_name = data['program_name']
-github_repo = data['github_repo']
-folder_remove = data['folder_remove']
-delete_zerobyte = data['delete_zerobyte']
+executable_name = ""
+program_name = "This Program Updater"
+github_repo = "Churitoring/Program_Updater"
+folder_remove = False
+delete_zerobyte = False
 
 if github_repo.startswith('/'):
     github_repo = github_repo[1:]

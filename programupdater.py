@@ -9,7 +9,7 @@ import json
 import sys
 
 # 파일을 읽기 모드로 열기
-with open('managements.json', 'r') as f:
+with open('management.json', 'r') as f:
     # JSON 데이터를 읽고, Python 딕셔너리로 변환
     data = json.load(f)
 

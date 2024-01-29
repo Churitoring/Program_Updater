@@ -15,6 +15,7 @@ with open('managements.json', 'r') as f:
 
 # JSON 데이터에서 실행 파일 이름과 레포지터리 이름 가져오기
 executable_name = data['executable_name']
+program_name = data['program_name']
 github_repo = data['github_repo']
 folder_remove = data['folder_remove']
 delete_zerobyte = data['delete_zerobyte']
@@ -42,7 +43,7 @@ current_directory = os.path.dirname(os.path.realpath(sys.executable))
 version_file_path = os.path.join(current_directory, 'version')
 updatingexe_file_path = os.path.join(current_directory, 'updating....exe')
 updating_file_path = os.path.join(current_directory, 'updating...')
-update_file_path = os.path.join(current_directory, 'programupdater.exe')
+update_file_path = os.path.join(current_directory, f'{program_name}.exe')
 game_exe_path = os.path.join(current_directory, executable_name)
 filename, file_extension = os.path.splitext(executable_name)
 

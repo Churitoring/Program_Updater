@@ -1,4 +1,4 @@
-# Program_Updater
+# Program Updater
 
 ## 한국어 사용법
 아직 한글만 지원됩니다.

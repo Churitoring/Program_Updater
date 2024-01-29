@@ -65,7 +65,7 @@ jsongen에 적으실때에는 "Churitoring/Program_Updater"만 적으시면 됩�
 ### 4. 최종 적용하기
 다 되셨다 하시면, 본 프로그램을 다운 받아서 압축을 푸신 폴더에서 필요없는 파일들을 지워주세요.
 기본적으로는 다음 파일을 지우시면 됩니다.
-1. jsonjen.exe
+1. jsongen.exe
 2. managements.json (지우실 파일은 끝에 s가 붙어있습니다. 끝에 s가 안붙어 있는 파일은 지우시면 안됩니다.)
 3. Program Updater.lnk (바로가기 파일입니다. 위의 "3. Program Updater 커스터마이징 하기"에서 바로가기 아이콘을 수정하시는 분들은 지우시면 안되며, 이 바로가기의 이름을 수정하셨으면 존재하지 않는 파일입니다.)
 4. This Program Updater.exe

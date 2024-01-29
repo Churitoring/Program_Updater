@@ -65,17 +65,17 @@ jsongen에 적으실때에는 "Churitoring/Program_Updater"만 적으시면 됩�
 ### 4. 최종 적용하기
 다 되셨다 하시면, 본 프로그램을 다운 받아서 압축을 푸신 폴더에서 필요없는 파일들을 지워주세요.
 기본적으로는 다음 파일을 지우시면 됩니다.
-jsonjen.exe
-managements.json (지우실 파일은 끝에 s가 붙어있습니다. 끝에 s가 안붙어 있는 파일은 지우시면 안됩니다.)
-Program Updater.lnk (바로가기 파일입니다. 위의 "3. Program Updater 커스터마이징 하기"에서 바로가기 아이콘을 수정하시는 분들은 지우시면 안되며, 이 바로가기의 이름을 수정하셨으면 존재하지 않는 파일입니다.)
-This Program Updater.exe
-versions (확장자가 존재하지 않는 파일입니다.)
+1. jsonjen.exe
+2. managements.json (지우실 파일은 끝에 s가 붙어있습니다. 끝에 s가 안붙어 있는 파일은 지우시면 안됩니다.)
+3. Program Updater.lnk (바로가기 파일입니다. 위의 "3. Program Updater 커스터마이징 하기"에서 바로가기 아이콘을 수정하시는 분들은 지우시면 안되며, 이 바로가기의 이름을 수정하셨으면 존재하지 않는 파일입니다.)
+4. This Program Updater.exe
+5. versions (확장자가 존재하지 않는 파일입니다.)
 
 즉, 다음 파일들이 남아야 합니다.
-management.json (끝에 s가 안붙어 있습니다.)
-Program Updater.exe (이름을 바꾸신 경우 해당 이름.exe 입니다.)
-version (끝에 s가 안붙어 있으며, 확장자가 존재하지 않는 파일입니다.)
-(Program Updater.lnk (위에서 말했듯이 필요하신 분만 남겨두시면 됩니다.))
+1. management.json (끝에 s가 안붙어 있습니다.)
+2. Program Updater.exe (이름을 바꾸신 경우 해당 이름.exe 입니다.)
+3. version (끝에 s가 안붙어 있으며, 확장자가 존재하지 않는 파일입니다.)
+4. (Program Updater.lnk (위에서 말했듯이 필요하신 분만 남겨두시면 됩니다.))
 
 바로가기 파일이 있을 경우, 원본 Program Updater.exe 파일은 숨김 처리 하시는것이 좋습니다.
 또한, 자동적으로 켜지게 할("jsongen의 기능 - Executable Name"에서 지정한 파일)을 굳이 보여주고 싶지 않으시다 하셔도 숨김처리 하시면 됩니다.

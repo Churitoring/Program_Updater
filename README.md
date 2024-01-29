@@ -94,4 +94,4 @@ management.json의 경우 숨김처리 하는것을 권장합니다.<br>
 <br>
 본 프로그램이 만들어진 이유는 쯔꾸르(RPG MAKER) 게임을 위해 만들어졌습니다. 하지만, 범용성 있게 넓혀가고 있습니다.<br>
 This Program Updater.exe는 말 그래도 본 프로그램을 업데이트 해주는 기능을 담고 있습니다.<br>
-수정하지도, jsongen을 사용하지도 않으신 상황에서의 management.json This Program Updater의 내용을 담고 있습니다. 이유는 단순히 예시로 사용하시라는 의도입니다.
+수정하지도, jsongen을 사용하지도 않으신 상황에서의 management.json은This Program Updater의 내용을 담고 있습니다. 이유는 단순히 예시로 사용하시라는 의도입니다.<br>

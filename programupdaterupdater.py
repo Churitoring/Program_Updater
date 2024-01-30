@@ -101,12 +101,19 @@ if local_version != latest_version:
                                         os.makedirs(target_path, exist_ok=True)
                                     else:  # 파일인 경우 파일을 쓴다.
                                         try:
-                                            with zip_ref.open(member) as source, open(target_path, 'wb') as target:
-                                                shutil.copyfileobj(source, target)
+                                            with zip_ref.open(member) as source:
+                                                with open(target_path, 'wb') as target:
+                                                    shutil.copyfileobj(source, target)
                                         except Exception as e:
                                             print(f"파일 덮어쓰기 중 오류가 발생했습니다: {e}")
-                                            pass  # 덮어쓰기 실패하면 무시하고 계속 진행
-                            else: zip_ref.extractall(current_directory)
+                                            continue  # 덮어쓰기 실패하면 무시하고 계속 진행
+                            else:
+                                for member in zip_ref.infolist():
+                                    try:
+                                        zip_ref.extract(member, current_directory)
+                                    except Exception as e:
+                                        print(f"파일 덮어쓰기 중 오류가 발생했습니다: {e}")
+                                        continue  # 덮어쓰기 실패하면 무시하고 계속 진행
 
                     # 압축 파일 삭제
                     try:

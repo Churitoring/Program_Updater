@@ -1,4 +1,6 @@
 # Program Updater
+https://github.com/Churitoring/Program_Updater/releases<br>
+Download
 
 ## 한국어 사용법
 아직 한글만 지원됩니다.<br>

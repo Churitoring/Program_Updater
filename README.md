@@ -75,6 +75,10 @@ jsongen에 적으실때에는 "Churitoring/Program_Updater"만 적으시면 됩�
 2. Program Updater.exe (이름을 바꾸신 경우 해당 이름.exe 입니다.)
 3. version (끝에 s가 안붙어 있으며, 확장자가 존재하지 않는 파일입니다.)
 4. (Program Updater.lnk (위에서 말했듯이 필요하신 분만 남겨두시면 됩니다.))
+5. python3.dll
+6. python311.dll
+7. frozen_application_license.txt
+8. lib 폴더 및 해당 폴더 내의 모든 파일
 <br>
 바로가기 파일이 있을 경우, 원본 Program Updater.exe 파일은 숨김 처리 하시는것이 좋습니다.<br>
 또한, 자동적으로 켜지게 할("jsongen의 기능 - Executable Name"에서 지정한 파일)을 굳이 보여주고 싶지 않으시다 하셔도 숨김처리 하시면 됩니다.<br>
@@ -94,4 +98,4 @@ management.json의 경우 숨김처리 하는것을 권장합니다.<br>
 <br>
 본 프로그램이 만들어진 이유는 쯔꾸르(RPG MAKER) 게임을 위해 만들어졌습니다. 하지만, 범용성 있게 넓혀가고 있습니다.<br>
 This Program Updater.exe는 말 그래도 본 프로그램을 업데이트 해주는 기능을 담고 있습니다.<br>
-수정하지도, jsongen을 사용하지도 않으신 상황에서의 management.json This Program Updater의 내용을 담고 있습니다. 이유는 단순히 예시로 사용하시라는 의도입니다.
+수정하지도, jsongen을 사용하지도 않으신 상황에서의 management.json은This Program Updater의 내용을 담고 있습니다. 이유는 단순히 예시로 사용하시라는 의도입니다.<br>

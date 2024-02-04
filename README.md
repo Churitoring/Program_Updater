@@ -1,4 +1,6 @@
 # Program Updater
+https://github.com/Churitoring/Program_Updater/releases<br>
+Download
 
 ## 한국어 사용법
 아직 한글만 지원됩니다.<br>
@@ -85,4 +87,5 @@ Program Updater 폴더 안에 들어있는 파일들만 압축하여 배포하�
 본 프로그램은 자기 자신이 만들지 않은 릴리즈에도 사용하실 수 있습니다. 단, 위에서 말했듯, 릴리즈가 zip파일의 형태여야 합니다.<br>
 <br>
 본 프로그램이 만들어진 이유는 쯔꾸르(RPG MAKER) 게임을 위해 만들어졌습니다. 하지만, 범용성 있게 넓혀가고 있습니다.<br>
-This Program Updater.exe는 말 그래도 본 프로그램을 업데이트 해주는 기능을 담고 있습니다.
+This Program Updater.exe는 말 그래도 본 프로그램을 업데이트 해주는 기능을 담고 있습니다. 단, 정상적으로 작동하는지 확인하지는 않았습니다.<br>
+그런 이유로, Program Updater.exe를 수정하여 업데이트 하는 행위 또한 정상적으로 작동하는지 확인하지 않았기에, 해당 행위는 권장드리지 않습니다.

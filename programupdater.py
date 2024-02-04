@@ -141,19 +141,23 @@ if local_version != latest_version:
         os._exit(0)
 
 def delete_empty_files(directory):
-    # 현재 디렉토리와 하위 디렉토리의 모든 파일을 검색합니다.
     for foldername, _, filenames in os.walk(directory, topdown=False):
         for filename in filenames:
             file_path = os.path.join(foldername, filename)
-            # 파일 크기가 0인 경우 삭제합니다.
             if os.path.getsize(file_path) == 0:
-                os.remove(file_path)
-                print(f'{file_path} has been removed.')
+                try:
+                    os.remove(file_path)
+                    print(f'{file_path} has been removed.')
+                except Exception as e:
+                    print(f'Failed to remove {file_path}: {str(e)}')
         
-        # 파일을 모두 검사한 후, 빈 디렉토리를 확인하고 삭제합니다.
         if not os.listdir(foldername):
-            os.rmdir(foldername)
-            print(f'Empty directory {foldername} has been removed.')
+            try:
+                os.rmdir(foldername)
+                print(f'Empty directory {foldername} has been removed.')
+            except Exception as e:
+                print(f'Failed to remove directory {foldername}: {str(e)}')
+
 
 if os.path.exists(updatingexe_file_path):
     os.remove(updatingexe_file_path)

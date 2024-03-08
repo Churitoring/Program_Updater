@@ -14,10 +14,11 @@ https://youtu.be/eZ3ckYCskww<br>
 아직까지 본 프로그램은 zip파일만 지원됩니다. 릴리즈 하실때 유의 바랍니다.
 
 ### 2. jsongen으로 management파일 만들기
-jsongen 폴더 안에 jsongen.exe가 있습니다.<br>
+Program Updater 폴더 안에 jsongen.exe가 있습니다.<br>
 원래 json을 다루실 줄 아는 분들도 이거 쓰시는게 편할겁니다.<br>
 대소문자를 구분하지는 않으나, 그냥 대소문자 맞춰서 써주세요.<br>
-아래 서식에 맞춰 작성하신 후 저장 버튼을 누르시면 management.json이 생성됩니다. 이 파일을 Program Updater 폴더 안쪽으로 옮겨주세요.
+아래 서식에 맞춰 작성하신 후 저장 버튼을 누르시면 lib폴더 내부에 management.json이 생성됩니다. 특별한 일이 없으시면 저장 누르시고 끄시면 됩니다.<br>
+혹시라도 확인이 필요하시면 lib 폴더 내부에 management.json이 생성되었는지 확인하시면 됩니다. 저장하지 않으시면 management.json 파일이 없으실겁니다.
 
 #### jsongen의 기능 - GitHub Repository
 해당 프로그램의 리포지토리 주소를 적으시되, 깃허브 주소는 제외하시면 됩니다.<br>
@@ -27,9 +28,6 @@ https://github.com/Churitoring/Program_Updater<br>
 이고,<br>
 jsongen에 적으실때에는 "Churitoring/Program_Updater"만 적으시면 됩니다.<br>
 당연히 이대로 적으시면 안되고, 각자의 리포지토리 주소를 적어주시면 됩니다.
-
-#### jsongen의 기능 - Program Name
-본 프로그램의 이름을 확장자를 제외하고 적으시면 됩니다. 만약 본 프로그램을 Game.exe라는 이름으로 두고 싶으시면 Game이라고 적으시면 됩니다.
 
 #### jsongen의 기능 - Executable Name
 업데이트 이후 실행하실 파일의 이름을 확장자 포함해서 적으시면 됩니다.<br>
@@ -78,7 +76,6 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 위의 jsongen을 다 적고서 management.json 파일을 제대로 저장하였다면, 모든 파일을 복사한 이후 제대로 동작하는지 확인하기 위해 실행해주세요.<br>
 복사하지 않으실 경우 제대로 작동하여 파일 양이 엄청 많아졌을때 이 파일들을 찾기 어려워서 그렇습니다.<br>
 <br>
-프로그램의 이름을 수정하실때에는 위에서 했던 "jsongen의 기능 - Program Name"에서 적으셨던 이름을 그대로 적으셔야 합니다.<br>
 프로그램 자체의 아이콘을 변경하실때에는 resourcehacker(https://www.angusj.com/resourcehacker/ )와 같은 프로그램으로 변경해주세요.<br>
 사용법(https://aboutbox.tistory.com/152 )<br>
 <br>
@@ -86,7 +83,11 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 (바로가기 파일 우클릭 → 속성 → 아이콘 변경)
 
 ### 4. 최종 적용하기
-다 되셨다 하시면, Program Updater폴더 안에 있는 파일들을 전부 사용하실 파일이 있는 폴더에 옮겨주세요.
+다 되셨다 하시면, Program Updater폴더 안에 있는 파일들 중 jsongen.exe를 제외한 전부를 사용하실 파일이 있는 폴더에 옮겨주세요. 옮기실 파일들은 다음과 같습니다.<br>
+1. lib 폴더
+2. Program Updater.exe (이름 변경 가능)
+3. python311.dll
+4. python3.dll (없어도 fatal error 메시지가 출력되나, 정상 작동합니다. 굳이 제외해야할 특별한 경우가 아니라면 제외하지 않는것을 추천드립니다.)
 <br>
 바로가기 파일이 있을 경우, 원본 Program Updater.exe 파일은 숨김 처리 하시는것이 좋습니다.<br>
 또한, 자동적으로 켜지게 할("jsongen의 기능 - Executable Name"에서 지정한 파일)을 굳이 보여주고 싶지 않으시다 하셔도 숨김처리 하시면 됩니다.<br>
@@ -94,7 +95,7 @@ management.json의 경우 숨김처리 하는것을 권장합니다.<br>
 (우클릭 → 속성 → 숨김(체크))<br>
 <br>
 Program Updater 폴더 안에 들어있는 파일들만 압축하여 배포하셔도 됩니다. 단, 이 경우에는 디스코드나 카카오톡 같은 기타 다른곳에서 배포하실때에만 사용하시고, 깃허브 릴리즈에 올리시면 안됩니다.<br>
-또한, version 파일을 지우셔야 합니다. 그렇지 않을 경우 업데이트(이 경우 최초 다운로드)가 안될수도 있습니다.<br>
+또한, lib폴더 내부에 있는 version 파일을 지우셔야 합니다. 그렇지 않을 경우 업데이트(이 경우 최초 다운로드)가 안될수도 있습니다.<br>
 <br>
 릴리즈 하신 이후, 제대로 정상 작동하는지 확인해주세요.
 

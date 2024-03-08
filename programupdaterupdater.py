@@ -113,9 +113,9 @@ with open('./lib/management.json', 'r') as f:
 # JSON 데이터에서 실행 파일 이름과 레포지터리 이름 가져오기
 github_repo = "Churitoring/Program_Updater"
 executable_name = ""
-folder_remove = data['folder_remove']
-delete_zerobyte = data['delete_zerobyte']
-delta_update = data['delta_update']
+folder_remove = False
+delete_zerobyte = False
+delta_update = False
 
 if github_repo.startswith('/'):
     github_repo = github_repo[1:]

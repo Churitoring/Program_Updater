@@ -1,4 +1,5 @@
 #python setup.py build
+#pyinstaller programupdater.py --icon=programupdater.ico
 from cx_Freeze import setup, Executable 
 
 setup(

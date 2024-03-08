@@ -23,14 +23,11 @@ def print_update_status(local_version, target_version):
     else:
         print(f"이 창을 닫지 마세요. \n{local_version} → {target_version}")
 
-def create_and_execute_updating_file(updating_file_path, update_file_path, updatingexe_file_path):
-    if not os.path.exists(updating_file_path):
-        shutil.copy(update_file_path, updatingexe_file_path)
-        open(updating_file_path, 'w').close()
-        Popen([updatingexe_file_path])
+def create_and_execute_updating_file(updater_file_path, updating_file_path):
+    if current_exe_name != 'updating....exe':
+        shutil.copy(updater_file_path, updating_file_path)
+        Popen([updating_file_path])
         os._exit(0)
-    else:
-        os.remove(updating_file_path)
 
 def download_and_extract_assets(assets, target_version):
     for asset in assets:
@@ -86,7 +83,7 @@ def download_and_extract_assets(assets, target_version):
     with open(version_file_path, 'w', encoding='utf-8') as version_file:
         version_file.write(target_version)
 
-    Popen([update_file_path])
+    Popen([updater_file_path])
     os._exit(0)
 
 def delete_empty_files(directory):
@@ -109,13 +106,12 @@ def delete_empty_files(directory):
 
 
 # 파일을 읽기 모드로 열기
-with open('management.json', 'r') as f:
+with open('./lib/management.json', 'r') as f:
     # JSON 데이터를 읽고, Python 딕셔너리로 변환
     data = json.load(f)
 
 # JSON 데이터에서 실행 파일 이름과 레포지터리 이름 가져오기
 github_repo = data['github_repo']
-program_name = data['program_name']
 executable_name = data['executable_name']
 folder_remove = data['folder_remove']
 delete_zerobyte = data['delete_zerobyte']
@@ -133,12 +129,24 @@ os.system('cls' if os.name == 'nt' else 'clear')
 print("이 창을 닫지 마세요.")
 
 current_directory = os.path.dirname(os.path.realpath(sys.executable))
-version_file_path = os.path.join(current_directory, 'version')
-updatingexe_file_path = os.path.join(current_directory, 'updating....exe')
-updating_file_path = os.path.join(current_directory, 'updating...')
-update_file_path = os.path.join(current_directory, f'{program_name}.exe')
+version_file_path = os.path.join(current_directory, 'lib', 'version')
+updating_file_path = os.path.join(current_directory, 'updating....exe')
 game_exe_path = os.path.join(current_directory, executable_name)
 filename, file_extension = os.path.splitext(executable_name)
+current_exe_name = os.path.basename(sys.argv[0])
+current_exe_path = os.path.join(current_directory, f'{current_exe_name}.exe')
+current_exe_json = os.path.join(current_directory, 'lib', 'program_name.json')
+
+if current_exe_name != 'updating....exe':
+    # JSON 파일이 존재하는지 확인합니다.
+    if not os.path.exists(current_exe_json):
+    # JSON 파일이 존재하지 않는 경우, 디렉토리를 생성합니다.
+        os.makedirs(os.path.dirname(current_exe_json), exist_ok=True)
+    with open(current_exe_json, 'w') as f:
+        json.dump(current_exe_name, f)
+
+with open(current_exe_json, 'r') as f:
+    updater_file_path = json.load(f)
 
 if not os.path.exists(version_file_path):
     with open(version_file_path, 'w', encoding='utf-8') as version_file:
@@ -161,7 +169,7 @@ if delta_update == True:
     for release in releases:
         release_version = release['tag_name']
         if release_version > local_version:
-            create_and_execute_updating_file(updating_file_path, update_file_path, updatingexe_file_path)
+            create_and_execute_updating_file(updater_file_path, updating_file_path)
             print_update_status(local_version, release_version)
             download_and_extract_assets(release['assets'], release_version)
 else:
@@ -174,12 +182,13 @@ else:
         print(f"최신 버전을 확인하는 중 오류가 발생했습니다: {e}")
         latest_version = local_version
     if local_version != latest_version:
-        create_and_execute_updating_file(updating_file_path, update_file_path, updatingexe_file_path)
+        create_and_execute_updating_file(updater_file_path, updating_file_path)
         print_update_status(local_version, latest_version)
         download_and_extract_assets(response.json()['assets'], latest_version)
 
-if os.path.exists(updatingexe_file_path):
-    os.remove(updatingexe_file_path)
+if os.path.exists(updating_file_path):
+    if current_exe_name != 'updating....exe':
+        os.remove(updating_file_path)
 
 if delete_zerobyte == True:
     delete_empty_files('./')

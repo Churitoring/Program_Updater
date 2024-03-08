@@ -66,11 +66,10 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 혹시나 Delta Update 기능을 사용하다가 중단하거나, 반대의 경우에는 깃허브 리포지토리를 새로 생성해주시는것을 추천드립니다.<br>
 또한, 원본 리포지토리의 management.json파일을 jsongen을 사용하여 다음과 같이 설정해주세요.(해당 리포지토리의 마지막 업데이트에 포함되게 해주세요.)
 1. GitHub Repository: 변경할 리포지토리 주소
-2. Program Name: 그대로
-3. Executable Name: Program Name과 같게. 단, 확장자는 제외.
-4. Remove Folder: 그대로
-5. Delete Zerobyte: 그대로
-6. Delta Update: 반대로. 체크 되어있다면 풀고, 안되어있다면 체크해주세요.
+2. Executable Name: Program Name과 같게. 단, 확장자는 제외.
+3. Remove Folder: 그대로
+4. Delete Zerobyte: 그대로
+5. Delta Update: 반대로. 체크 되어있다면 풀고, 안되어있다면 체크해주세요.
 
 ### 3. Program Updater 커스터마이징 하기
 위의 jsongen을 다 적고서 management.json 파일을 제대로 저장하였다면, 모든 파일을 복사한 이후 제대로 동작하는지 확인하기 위해 실행해주세요.<br>
@@ -88,7 +87,6 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 2. Program Updater.exe (이름 변경 가능)
 3. python311.dll
 4. python3.dll (없어도 fatal error 메시지가 출력되나, 정상 작동합니다. 굳이 제외해야할 특별한 경우가 아니라면 제외하지 않는것을 추천드립니다.)
-<br>
 바로가기 파일이 있을 경우, 원본 Program Updater.exe 파일은 숨김 처리 하시는것이 좋습니다.<br>
 또한, 자동적으로 켜지게 할("jsongen의 기능 - Executable Name"에서 지정한 파일)을 굳이 보여주고 싶지 않으시다 하셔도 숨김처리 하시면 됩니다.<br>
 management.json의 경우 숨김처리 하는것을 권장합니다.<br>

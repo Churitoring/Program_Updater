@@ -104,12 +104,6 @@ def delete_empty_files(directory):
             except Exception as e:
                 print(f'Failed to remove directory {foldername}: {str(e)}')
 
-
-# 파일을 읽기 모드로 열기
-with open('./lib/management.json', 'r') as f:
-    # JSON 데이터를 읽고, Python 딕셔너리로 변환
-    data = json.load(f)
-
 # JSON 데이터에서 실행 파일 이름과 레포지터리 이름 가져오기
 github_repo = "Churitoring/Program_Updater"
 executable_name = ""

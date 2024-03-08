@@ -1,5 +1,6 @@
 import tkinter as tk
 import json
+import os
 
 def save():
     data = {
@@ -9,7 +10,7 @@ def save():
         "delete_zerobyte": delete_zerobyte_var.get(),
         "delta_update": delta_update_var.get()
     }
-    with open('management.json', 'w') as f:
+    with open(os.path.join('lib', 'management.json'), 'w') as f:
         json.dump(data, f)
     root.destroy()
 

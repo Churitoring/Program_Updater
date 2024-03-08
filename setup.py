@@ -1,5 +1,5 @@
 #python setup.py build
-#pyinstaller programupdater.py --icon=programupdater.ico
+#pyinstaller jsongen.py --icon=programupdater.ico --noconsole --onefile
 from cx_Freeze import setup, Executable 
 
 setup(

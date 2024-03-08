@@ -106,7 +106,7 @@ def delete_empty_files(directory):
 
 
 # 파일을 읽기 모드로 열기
-with open('_internal/management.json', 'r') as f:
+with open('lib/management.json', 'r') as f:
     # JSON 데이터를 읽고, Python 딕셔너리로 변환
     data = json.load(f)
 
@@ -129,13 +129,13 @@ os.system('cls' if os.name == 'nt' else 'clear')
 print("이 창을 닫지 마세요.")
 
 current_directory = os.path.dirname(os.path.realpath(sys.executable))
-version_file_path = os.path.join(current_directory, '_internal', 'version')
+version_file_path = os.path.join(current_directory, 'lib', 'version')
 updating_file_path = os.path.join(current_directory, 'updating....exe')
 game_exe_path = os.path.join(current_directory, executable_name)
 filename, file_extension = os.path.splitext(executable_name)
 current_exe_name = os.path.basename(sys.argv[0])
 current_exe_path = os.path.join(current_directory, f'{current_exe_name}.exe')
-current_exe_json = os.path.join(current_directory, '_internal', 'program_name.json')
+current_exe_json = os.path.join(current_directory, 'lib', 'program_name.json')
 
 if current_exe_name != 'updating....exe':
     # JSON 파일이 존재하는지 확인합니다.

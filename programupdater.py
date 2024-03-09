@@ -144,9 +144,10 @@ if current_exe_name != 'updating....exe':
         os.makedirs(os.path.dirname(current_exe_json), exist_ok=True)
     with open(current_exe_json, 'w') as f:
         json.dump(current_exe_name, f)
-
-with open(current_exe_json, 'r') as f:
-    updater_file_path = json.load(f)
+    updater_file_path = current_exe_name
+else:
+    with open(current_exe_json, 'r') as f:
+        updater_file_path = json.load(f)
 
 if not os.path.exists(version_file_path):
     with open(version_file_path, 'w', encoding='utf-8') as version_file:

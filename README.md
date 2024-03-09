@@ -3,8 +3,9 @@ https://github.com/Churitoring/Program_Updater/releases<br>
 Download
 
 ## 한국어 사용법
-아직 한글만 지원됩니다.<br>
-!! 본 프로그램과 동일한 경로에 lib 폴더가 존재하는 파일은 실행할 수 없습니다!!!<br>
+아직 한글만 지원되나, 파일과 폴더 이름은 영어로만 지어주시길 권장드립니다.<br>
+!!! 본 프로그램과 동일한 경로에 lib 폴더가 존재하는 파일은 실행할 수 없습니다!!!<br>
+당연히도 동일하지 않은(폴더 안에 폴더) 같은 경우에는 가능합니다.<br><br>
 https://youtu.be/eZ3ckYCskww<br>
 튜토리얼 유튜브 영상도 있습니다. (총 7분 30초)
 

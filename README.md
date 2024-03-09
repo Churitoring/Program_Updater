@@ -66,10 +66,8 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 혹시나 Delta Update 기능을 사용하다가 중단하거나, 반대의 경우에는 깃허브 리포지토리를 새로 생성해주시는것을 추천드립니다.<br>
 또한, 원본 리포지토리의 management.json파일을 jsongen을 사용하여 다음과 같이 설정해주세요.(해당 리포지토리의 마지막 업데이트에 포함되게 해주세요.)
 1. GitHub Repository: 변경할 리포지토리 주소
-2. Executable Name: 그대로
-3. Remove Folder: 그대로
-4. Delete Zerobyte: 그대로
-5. Delta Update: 반대로. 체크 되어있다면 풀고, 안되어있다면 체크해주세요.
+2. Executable Name, Remove Folder, Delete Zerobyte: 그대로
+3. Delta Update: 반대로. 체크 되어있다면 풀고, 안되어있다면 체크해주세요.
 
 ### 3. Program Updater 커스터마이징 하기
 위의 jsongen을 다 적고서 management.json 파일을 제대로 저장하였다면, 모든 파일을 복사한 이후 제대로 동작하는지 확인하기 위해 실행해주세요.<br>

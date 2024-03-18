@@ -62,7 +62,7 @@ jsongen에 적으실때에는 "Churitoring/Program_Updater"만 적으시면 됩�
 델타 업데이트는 수정점(변경된 파일)만 업데이트 하는 방법으로, 수정점만 릴리즈 해주시면 되는 방법입니다.<br>
 전체 용량은 상당하나, 개별 수정 파일의 용량은 낮을 때 사용해주시면 됩니다.<br>
 당연히 이 경우 제일 첫 번째 버전은 아무것도 없는 곳 에서 수정하는 것 이므로 전체 파일을 업로드해주셔야 합니다.<br>
-DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그램으로 업데이트 이전 버전과 업데이트할 버전의 차이가 있는 파일만 남겨서 올려주시면 됩니다.<br>
+DoubleKiller( https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그램으로 업데이트 이전 버전과 업데이트할 버전의 차이가 있는 파일만 남겨서 올려주시면 됩니다.<br>
 <br>
 혹시나 Delta Update 기능을 사용하다가 중단하거나, 반대의 경우에는 깃허브 리포지토리를 새로 생성해주시는것을 추천드립니다.<br>
 또한, 원본 리포지토리의 management.json파일을 jsongen을 사용하여 다음과 같이 설정해주세요.(해당 리포지토리의 마지막 업데이트에 포함되게 해주세요.)
@@ -74,8 +74,8 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 위의 jsongen을 다 적고서 management.json 파일을 제대로 저장하였다면, 모든 파일을 복사한 이후 제대로 동작하는지 확인하기 위해 실행해주세요.<br>
 복사하지 않으실 경우 제대로 작동하여 파일 양이 엄청 많아졌을때 이 파일들을 찾기 어려워서 그렇습니다.<br>
 <br>
-프로그램 자체의 아이콘을 변경하실때에는 resourcehacker(https://www.angusj.com/resourcehacker/ )와 같은 프로그램으로 변경해주세요.<br>
-사용법(https://aboutbox.tistory.com/152 )<br>
+프로그램 자체의 아이콘을 변경하실때에는 resourcehacker( https://www.angusj.com/resourcehacker/ )와 같은 프로그램으로 변경해주세요.<br>
+사용법( https://aboutbox.tistory.com/152 )<br>
 <br>
 혹은 그건 못하시겠다 하신다면 이미 만들어져 있는 본 프로그램의 바로가기 파일의 아이콘을 수정하시는 방법도 있습니다. 그럴 경우 바로가기의 이름도 원하시는 이름으로 바꾸셔야 합니다.<br>
 (바로가기 파일 우클릭 → 속성 → 아이콘 변경)
@@ -86,6 +86,11 @@ DoubleKiller(https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 2. Program Updater.exe (이름 변경 가능)
 3. python311.dll
 4. python3.dll (없으면 fatal error 메시지가 출력되나, 정상 작동합니다. 굳이 제외해야할 특별한 경우가 아니라면 제외하지 않는것을 추천드립니다.)
+5. Program Updater.lnk (이름 변경 가능, 바로가기를 만드시지 않았다면 이 파일은 없으실겁니다. 바로가기를 안만드실거라면 이 항목은 무시하셔도 됩니다.)
+
+혹은, 옮기시지 말고 Program Updater와 본 파일의 경로를 일치 시킨 후, Program Updater와 본 파일 총 두개를 릴리즈에 업로드 하시는 방법도 있습니다.<br>
+이 방법의 경우, 매 업로드마다 두개의 파일을 업로드 해야한다는 귀찮음이 존재하나, 본 파일과 Program Updater가 섞이지 않으므로, 관리하기 편합니다.<br>
+하여, 옮기시지 말고 경로 일치 방법을 추천드립니다. 본 프로그램의 다운로드(릴리즈) 방식도 이 방식으로 되어있습니다. ( https://github.com/Churitoring/Program_Updater/releases )<br>
 
 바로가기 파일이 있을 경우, 원본 Program Updater.exe 파일은 숨김 처리 하시는것이 좋습니다.<br>
 또한, 자동적으로 켜지게 할("jsongen의 기능 - Executable Name"에서 지정한 파일)을 굳이 보여주고 싶지 않으시다 하셔도 숨김처리 하시면 됩니다.<br>

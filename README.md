@@ -1,6 +1,12 @@
 # Program Updater
 https://github.com/Churitoring/Program_Updater/releases<br>
-Download
+Download<br>
+<br>
+다운로드가 두개(Program_Updater_Program_Updater와, Program_Updater.)있습니다.<br>
+Program_Updater_Program_Updater는 이 프로그램을 업데이트하기 위한 프로그램이고, Program_Updater은 설정하실 수 있는 프로그램입니다.<br>
+Program_Updater_Program_Updater에서 This Program Updater를 켜주시면 자동적으로 Program_Updater가 다운로드됩니다.<br>
+즉, 두개의 차이는 이 프로그램을 업데이트 해주는 코드를 받냐 안받냐의 차이입니다.<br>
+사용하실때에 큰 차이점은 없습니다. 원하시는걸 받아주세요.
 
 ## 한국어 사용법
 아직 한글만 지원되나, 파일과 폴더 이름은 영어로만 지어주시길 권장드립니다.<br>

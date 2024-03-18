@@ -90,6 +90,7 @@ DoubleKiller( https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 
 혹은, 옮기시지 말고 Program Updater와 본 파일의 경로를 일치 시킨 후, Program Updater와 본 파일 총 두개를 릴리즈에 업로드 하시는 방법도 있습니다.<br>
 이 방법의 경우, 매 업로드마다 두개의 파일을 업로드 해야한다는 귀찮음이 존재하나, 본 파일과 Program Updater가 섞이지 않으므로, 관리하기 편합니다.<br>
+또한, 이 방법의 경우 아래에서 말 할 디스코드나 카카오톡 같은 기카 다른곳에 배포할때에도 문제 없이 배포할것만 고를 수 있습니다.<br>
 하여, 옮기시지 말고 경로 일치 방법을 추천드립니다. 본 프로그램의 다운로드(릴리즈) 방식도 이 방식으로 되어있습니다. ( https://github.com/Churitoring/Program_Updater/releases )<br>
 
 바로가기 파일이 있을 경우, 원본 Program Updater.exe 파일은 숨김 처리 하시는것이 좋습니다.<br>

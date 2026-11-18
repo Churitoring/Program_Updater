@@ -80,7 +80,7 @@ DoubleKiller( https://blog.naver.com/tnstn15/221039627683 )와 같은 프로그�
 위의 jsongen을 다 적고서 management.json 파일을 제대로 저장하였다면, 모든 파일을 복사한 이후 제대로 동작하는지 확인하기 위해 실행해주세요.<br>
 복사하지 않으실 경우 제대로 작동하여 파일 양이 엄청 많아졌을때 이 파일들을 찾기 어려워서 그렇습니다.<br>
 <br>
-프로그램 자체의 아이콘을 변경하실때에는 resourcehacker( https://www.angusj.com/resourcehacker/ )와 같은 프로그램으로 변경해주세요.<br>
+프로그램 자체의 아이콘을 변경하실때에는 resourcehacker( https://www.angusj.com/resourcehacker/ or [Resource Cracker](https://www.pelock.com/products/resource-cracker) )와 같은 프로그램으로 변경해주세요.<br>
 사용법( https://aboutbox.tistory.com/152 )<br>
 <br>
 혹은 그건 못하시겠다 하신다면 이미 만들어져 있는 본 프로그램의 바로가기 파일의 아이콘을 수정하시는 방법도 있습니다. 그럴 경우 바로가기의 이름도 원하시는 이름으로 바꾸셔야 합니다.<br>
